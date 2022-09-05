@@ -17,7 +17,7 @@
 
         //For Loop used to create multiplication table
 
-        for (int i = 0; i < maxNumb; i++)
+        for (int i = 0; i <= maxNumb; i++)
         {
             Console.WriteLine(numb + " x " + i + " = " + (numb * i));
 
