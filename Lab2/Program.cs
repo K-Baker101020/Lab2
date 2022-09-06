@@ -1,17 +1,22 @@
 ﻿public class Program {
     public static void Main(string[] args) {
-        //See https://aka.ms/new-console-template for more information
-        Console.WriteLine("Hello, World");
+        // Question # 3 
 
-        //#1 print the output of adding two numbers from user input
-        int num1, num2;
-        Console.Write("Enter the first number: ");
-        num1 = Convert.ToInt32(Console.ReadLine());
-
-        Console.Write("Enter the second number");
-        num2 = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine($"{num1} + {num2} = {num1 + num2}");
+        ConsoleTable table = new ConsoleTable("Type", "Byte(s) of memory", "Min", "Max");
+        table.AddRow("sbyte", "1", "-128", "127");
+        table.AddRow("byte", "1", "0", "255");
+        table.AddRow("short", "2", "-32768", "32767");
+        table.AddRow("ushort", "2", "0", "65535");
+        table.AddRow("int", "4", "-2147483648", "2147483647");
+        table.AddRow("uint", "4", "0", "4294967295");
+        table.AddRow("long", "8", "-9223372036854775808", "9223372036854775807");
+        table.AddRow("ulong", "8", "0", "18446744073709551615");
+        table.AddRow("float", "4", "-3.4028235E+38", "3.4028235E+38");
+        table.AddRow("double", "8", "-1.7976931348623157E+308", "1.7976931348623157E+308");
+        table.AddRow("decimal", "16", "-79228162514264337593543950335", "79228162514264337593543950335");
+        Console.WriteLine(table);
     }
+
+
 
 }
